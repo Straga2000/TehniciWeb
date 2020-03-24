@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3de43d24-a608-4fa4-9259-8285884f307c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deals.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/giftcard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscribe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pieces" beforeDir="false" afterPath="$PROJECT_DIR$/pieces" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/news.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/framework.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/framework.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/layout.css" afterDir="false" />
     </list>
@@ -80,7 +80,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584273630085</updated>
-      <workItem from="1584273631676" duration="24911000" />
+      <workItem from="1584273631676" duration="24913000" />
+      <workItem from="1584694336136" duration="6272000" />
+      <workItem from="1584988386052" duration="5029000" />
     </task>
     <servers />
   </component>
@@ -95,9 +97,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="536" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1584312897021" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584321588381">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584995117113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584321588381" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584995117113" />
   </component>
 </project>

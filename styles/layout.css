@@ -1,13 +1,4 @@
 @charset "utf-8";
-/*
-Template Name: Nekmit
-Author: <a href="https://www.os-templates.com/">OS Templates</a>
-Author URI: https://www.os-templates.com/
-Copyright: OS-Templates.com
-Licence: Free to use under our free template licence terms
-Licence URI: https://www.os-templates.com/template-terms
-File: Layout CSS
-*/
 
 @import url("fontawesome-free/css/all.css");
 @import url("framework.css");
@@ -316,7 +307,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#0AC6FC !important;}
 
 
 /* Content */
-#services li article{border-color:#0AC6FC;}
+#services li article{border-color: #0ac6fc;}
 #services li article a{color:inherit;}
 #services li article:hover{color:#FFFFFF; background-color:#026B8A;}
 #services li article:hover a{color:#0AC6FC;}
@@ -374,11 +365,6 @@ table a, #comments a{background-color:inherit;}
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
-
-
-/* Media Queries
---------------------------------------------------------------------------------------------------------------- */
-@-ms-viewport{width:device-width;}
 
 
 /* Max Wrapper Width - Laptop, Desktop etc.
