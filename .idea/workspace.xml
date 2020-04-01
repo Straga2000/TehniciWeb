@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3de43d24-a608-4fa4-9259-8285884f307c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/giftcard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscribe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deals.html" beforeDir="false" afterPath="$PROJECT_DIR$/deals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/giftcard.html" beforeDir="false" afterPath="$PROJECT_DIR$/giftcard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/framework.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/framework.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/layout.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +58,16 @@
       <recent name="C:\Users\40747\Desktop\Project\TehniciWeb" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TehniciWeb/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -82,7 +92,10 @@
       <updated>1584273630085</updated>
       <workItem from="1584273631676" duration="24913000" />
       <workItem from="1584694336136" duration="6272000" />
-      <workItem from="1584988386052" duration="5029000" />
+      <workItem from="1584988386052" duration="7580000" />
+      <workItem from="1585594792346" duration="3983000" />
+      <workItem from="1585671172953" duration="4267000" />
+      <workItem from="1585690768636" duration="6846000" />
     </task>
     <servers />
   </component>

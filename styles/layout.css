@@ -3,6 +3,9 @@
 @import url("fontawesome-free/css/all.css");
 @import url("framework.css");
 
+/* Create button for menu*/
+.btnMenu{margin-left: 20px;}
+
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row0, .row0 a{}
@@ -60,6 +63,10 @@
 .grid-3 > li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last line of items - margin is restored in the media queries when items stack */
 .grid-3 > li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
 
+.grid-4 > li{margin-bottom:30px;}
+.grid-4 > li:nth-last-child(-n+4){margin-bottom:0;}/* Removes bottom margin from the last line of items - margin is restored in the media queries when items stack */
+.grid-4 > li:nth-child(4n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
+
 /* Services */
 #services{}
 #services li{margin-bottom:30px; padding:25px 0 0 0;}
@@ -68,6 +75,7 @@
 #services li article > a > i{display:block; position:absolute; top:-25px; right:10px; width:50px; height:50px; line-height:48px; border:1px solid; font-size:1.8rem; text-align:center; z-index:1;}
 #services li article .heading{margin-bottom:15px; font-weight:700;}
 #services li article footer{margin-top:20px;}
+
 
 /* Points */
 #points{padding:50px;}
@@ -147,11 +155,6 @@ Delete this section if roundness is not wanted / required
 #footer input, #footer button{border-radius:12px;}
 
 
-/* Transition Fade
-This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
-If you don't want it to fade all elements, you have to list the ones you want to be faded individually
-Delete it completely to stop fading
---------------------------------------------------------------------------------------------------------------- */
 *, *::before, *::after{transition:all .3s ease-in-out;}
 #mainav form *{transition:none !important;}
 
@@ -311,7 +314,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#0AC6FC !important;}
 #services li article a{color:inherit;}
 #services li article:hover{color:#FFFFFF; background-color:#026B8A;}
 #services li article:hover a{color:#0AC6FC;}
-#services li article > a > i{color:#FFFFFF; background-color:#01546B; border-color:rgba(0,0,0,.1);}
+#services li article > a > i{color: #fdfff4; background-color: #026b8a; border-color:rgba(0,0,0,.1);}
 #services li article:hover > a > i{background-color:#0AC6FC;}
 
 #points{color:#474747; background-color:#FFFFFF;}
