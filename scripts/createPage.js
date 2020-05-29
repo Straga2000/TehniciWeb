@@ -50,26 +50,40 @@ function changeTitle() {
 }*/
 
 function getBook() {
-    idBookPage = localStorage.getItem("idBookPage");
-    $.ajax({
-        url: 'http://localhost:3000/book',
-        type: 'GET',
-        dataType: 'json',
-        success: function(data) {
-            createPage(data[idBookPage])
-            /*for(let i = 0; i < data.length; i++)
-                if(data.id === idBookPage)
-                {
-                    createPage(data[i]);
-                    console.log(data[i]);
-                    break;
-                }*/
-            /*console.log(idBookPage, data[idBookPage]);*/
-        },
-        error: function(data) {
-            console.log("Nu s a reusit");
-        }
-    });
+
+    console.log(localStorage["idBookPage"]);
+    fetch('http://localhost:3000/book/' + ID)
+    .then(function (response) {
+        response.json().then(function (data) { 
+
+            createPage(data);
+
+
+            //localStorage.setItem("dataLength", (data.length - 1).toString());
+        })
+    })
+
+
+    // idBookPage = localStorage.getItem("idBookPage");
+    // $.ajax({
+    //     url: 'http://localhost:3000/book',
+    //     type: 'GET',
+    //     dataType: 'json',
+    //     success: function(data) {
+    //         createPage(data[idBookPage])
+    //         /*for(let i = 0; i < data.length; i++)
+    //             if(data.id === idBookPage)
+    //             {
+    //                 createPage(data[i]);
+    //                 console.log(data[i]);
+    //                 break;
+    //             }*/
+    //         /*console.log(idBookPage, data[idBookPage]);*/
+    //     },
+    //     error: function(data) {
+    //         console.log("Nu s a reusit");
+    //     }
+    // });
 }
 
 function createPage(object) {

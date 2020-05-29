@@ -16,20 +16,40 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Create
-app.post("/dogs", (req, res) => {
-    const dogsList = readJSONFile();
-    // Completati cu codul vostru aici
-});
+app.post("/book", (req, res) => {
+    const booksList = readJSONFile();
+    const newbook = req.body;
+    newbook.id = booksList.length;
+    const newbookList = [...booksList, newbook];
+    writeJSONFile(newbookList);
+    res.json(newbook);
+  });
 
 // Read One
-app.get("/dogs/:id", (req, res) => {
-    const dogsList = readJSONFile();
-    // Completati cu codul vostru aici
-});
+app.get("/book/:id", (req, res) => {
+    const booksList = readJSONFile();
+    const id = req.params.id;
+    let idFound = false;
+    let foundbook;
+  
+    booksList.forEach(book => {
+      if (id == book.id) {
+        idFound = true;
+        foundbook = book
+      }
+    });
+  
+    if (idFound) {
+      res.json(foundbook);
+    } else {
+      res.status(404).send(`book ${id} was not found`);
+    }
+  });
 
 // Read All
-app.get("/dogs", (req, res) => {
-    const dogsList = readJSONFile();
+app.get("/book", (req, res) => {
+    const booksList = readJSONFile();
+    res.json(booksList);
     // Completati cu codul vostru aici
 });
 
@@ -40,21 +60,29 @@ app.put("/dogs/:id", (req, res) => {
 });
 
 // Delete
-app.delete("/dogs/:id", (req, res) => {
-    const dogsList = readJSONFile();
-    // Completati cu codul vostru aici
-});
+app.delete("/book/:id", (req, res) => {
+    const booksList = readJSONFile();
+    const id = req.params.id;
+    const newBooksList = booksList.filter((book) => book.id != id)
+  
+    if (booksList.length !== newBooksList.length) {
+      res.status(200).send(`Book ${id} was removed`);
+      writeJSONFile(newBooksList);
+    } else {
+      res.status(404).send(`Book ${id} was not found`);
+    }
+  });
 
 // Functia de citire din fisierul db.json
 function readJSONFile() {
-    return JSON.parse(fs.readFileSync("db.json"))["dogs"];
+    return JSON.parse(fs.readFileSync("../database/books.json"))["book"];
 }
 
 // Functia de scriere in fisierul db.json
 function writeJSONFile(content) {
     fs.writeFileSync(
-        "db.json",
-        JSON.stringify({ dogs: content }),
+        "../database/books.json",
+        JSON.stringify({ book: content }),
         "utf8",
         err => {
             if (err) {
@@ -63,6 +91,34 @@ function writeJSONFile(content) {
         }
     );
 }
+
+app.put("/book/:id", (req, res) => {
+    let booksList = readJSONFile();
+    let id = req.params.id;
+    let newbook = req.body;
+    newbook.id = id;
+    idFound = false;
+  
+    const newbooksList = booksList.map((book) => {
+       if (book.id == id) {
+         idFound = true;
+         return newbook
+       }
+      return book
+    })
+    
+    writeJSONFile(newbooksList);
+  
+    if (idFound) {
+      res.json(newbook);
+    } else {
+      res.status(404).send(`book ${id} was not found`);
+    }
+  
+  });
+
+
+app.use(express.static('../'));
 
 // Pornim server-ul
 app.listen("3000", () =>

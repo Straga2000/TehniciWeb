@@ -16,7 +16,7 @@ var newUpdateBook = {
         "$date": "2009-04-01T00:00:00.000-0700"
     },
     thumbnailUrl: "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg",
-    shortDescription: "Good joke",
+    shortDescription: "No",
     longDescription: "Android is an open source mobile phone platform based on the Linux operating system and developed by the Open Handset Alliance, a consortium of over 30 hardware, software and telecom companies that focus on open standards for mobile devices. Led by search giant, Google, Android is designed to deliver a better and more open and cost effective mobile experience.    Unlocking Android: A Developer's Guide provides concise, hands-on instruction for the Android operating system and development tools. This book teaches important architectural concepts in a straightforward writing style and builds on this with practical and useful examples throughout. Based on his mobile development experience and his deep knowledge of the arcane Android technical documentation, the author conveys the know-how you need to develop practical applications that build upon or replace any of Androids features, however small.    Unlocking Android: A Developer's Guide prepares the reader to embrace the platform in easy-to-understand language and builds on this foundation with re-usable Java code examples. It is ideal for corporate and hobbyists alike who have an interest, or a mandate, to deliver software functionality for cell phones.    WHAT'S INSIDE:        * Android's place in the market      * Using the Eclipse environment for Android development      * The Intents - how and why they are used      * Application classes:            o Activity            o Service            o IntentReceiver       * User interface design      * Using the ContentProvider to manage data      * Persisting data with the SQLite database      * Networking examples      * Telephony applications      * Notification methods      * OpenGL, animation & multimedia      * Sample Applications  ",
     status: "PUBLISH",
     authors: [
@@ -49,84 +49,70 @@ window.onload = function () {
 };
 
 function getRandomBook() {
-    $.ajax({
-        url: 'http://localhost:3000/book',
-        type: 'GET',
-        dataType: 'json',
-        success: function (data) {
-            var rnd = Math.round(data.length * Math.random()).toString();
-            localStorage.setItem("idBookPage", rnd);
-            window.location.href = "http://localhost:63342/BlueLibrary/book.html";
-        },
-        error: function (data) {
-            console.log("Nu s-a reusit", data);
-        }
-    });
+
+    fetch('http://localhost:3000/book/' + Math.round(parseInt(localStorage["dataLength"]) * Math.random()).toString())
+    .then(function (response) {
+        response.json().then(function (data) { 
+
+                localStorage.setItem("idBookPage", data.id);
+
+                window.location = "http://localhost:3000/book.html";
+
+                localStorage.setItem("idBookPage", data.id);
+        })
+    })
 }
 
 function createBook() {
-    $.ajax({
-        url: 'http://localhost:3000/book',
-        type: 'POST',
-        data: newBook,
-        success: function (data) {
-            console.log(data);
-            window.location.href = "http://localhost:63342/BlueLibrary/deals.html";
+
+    fetch('http://localhost:3000/book', {
+        method: 'post',
+        headers: {
+            "Content-type": "application/json"
         },
-        error: function (data) {
-            console.log("Nu s-a reusit", data);
-        }
+        body: JSON.stringify(newBook)
+    }).then(function () {
+        window.location.reload();
     });
 }
 
 function updateBook() {
-    $.ajax({
-        url: 'http://localhost:3000/book/0',
-        type: 'PUT',
-        data: newUpdateBook,
-        success: function (data) {
-            console.log(data);
-            window.location.href = "http://localhost:63342/BlueLibrary/deals.html";
+
+    fetch(`http://localhost:3000/book/${0}`, {
+        method: 'PUT',
+        headers: {
+            "Content-type": "application/json"
         },
-        error: function (data) {
-            console.log("Nu s-a reusit", data);
-        }
+        body: JSON.stringify(newUpdateBook)
+    }).then(function () {
+    //goModifiy();
+        window.location.reload();
     });
 }
 
 function deleteBook() {
 
     var idVar = localStorage.getItem("dataLength");
-    $.ajax({
-        url: 'http://localhost:3000/book/' + idVar,
-        type: 'DELETE',
-        success: function (data) {
-            console.log(data);
-            window.location.href = "http://localhost:63342/BlueLibrary/deals.html";
-        },
-        error: function (data) {
-            console.log("Nu s-a reusit");
-        }
+    fetch(`http://localhost:3000/book/${idVar}`, {
+        method: 'DELETE',
+    }).then(function (data) {
+        window.location.reload();
     });
 }
 
 function getStock() {
-    $.ajax({
-        url: 'http://localhost:3000/book',
-        type: 'GET',
-        dataType: 'json',
-        success: function(data) {
+
+    fetch('http://localhost:3000/book')
+    .then(function (response) {
+        response.json().then(function (data) { 
             for(let i = 0; i < data.length; i++)
             {
                 data[i] = createElement(data[i]);
             }
 
             localStorage.setItem("dataLength", (data.length - 1).toString());
-        },
-        error: function(data) {
-            console.log("Nu s-a reusit", data);
-        }
-    });
+        })
+    })
 }
 
 function createElement(dataObject) {
@@ -151,8 +137,6 @@ function createElement(dataObject) {
         else
             image.src = "images/No_Picture.jpg";
         image.alt = "";
-
-        //console.log(image.width, image.height);
 
         divText.className = "text";
 
