@@ -1,0 +1,15 @@
+div.line {display: flex; flex-direction: row; vertical-align: center; justify-content: space-between;
+    margin: 0; padding: 1%; width: 100%; height: 70px;
+    border-radius: 12px;}
+
+div.line.right{justify-content: left;}
+
+.line p {display: flex; vertical-align: middle; justify-content: center; align-items: center;}
+.line button{display: flex; margin: 0 1%;}
+.line input {display: flex;}
+
+/*Graphical properties*/
+div.line{background-color: #0ac6fc80;}
+/*.line p{background-color: brown;}*/
+.line input {border-radius: 12px; border-color: #ffffff00;}
+.line p {color: #ffffff}

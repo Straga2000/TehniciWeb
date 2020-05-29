@@ -1,32 +1,40 @@
 @charset "utf-8";
 
-html{overflow-y:scroll; overflow-x:hidden;}
-html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
+/*html{overflow-y:scroll; overflow-x:hidden;}*/
+html {margin: 0; padding: 0;}
+body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
 
 *, *::before, *::after{box-sizing:border-box;}
 
+/*Text details*/
 .bold{font-weight:bold;}
 .center{text-align:center;}
 .right{text-align:right;}
+.justified{text-align:justify;}
+
 .uppercase{text-transform:uppercase;}
 .capitalise{text-transform:capitalize;}
-.hidden{display:none;}
+
+/*Display details*/
+
 .nospace{margin:0; padding:0; list-style:none;}
+
+.hidden{display:none;}
 .block{display:block;}
 .inline{display:inline-block;}
-.justified{text-align:justify;}
 .inline *{display:inline-block;}
 .inline *:last-child{margin-right:0;}
+
+
 .pushright li{margin-right:20px;}
 .pushright li:last-child{margin-right:0;}
 .borderedbox{border:1px solid;}
 .overlay{position:relative; z-index:1;}
 .overlay::after{display:block; position:absolute; top:0; left:0; width:100%; height:100%; content:""; z-index:-1;}
 .bgded{background-position:top center; background-repeat:no-repeat; background-size:cover;}
-.circle{border-radius:50%; background-clip:padding-box;}
 
-.btn, button.btn{display:inline-block; padding:8px 25px 10px; text-transform:uppercase; font-size:1rem; font-weight:400; border:1px solid;}
-button.btn{cursor:pointer;}
+
+.circle{border-radius:50%; background-clip:padding-box;}
 
 .clear, .group{display:block;}
 .clear::before, .clear::after, .group::before, .group::after{display:table; content:"";}
@@ -64,16 +72,23 @@ label{margin-bottom:5px;}
 
 /* Generalise
 --------------------------------------------------------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6, .heading{margin:0 0 20px 0; font-size:1.4rem; line-height:normal; font-weight:normal; text-transform:capitalize;}
+h1, h2, h3, h4, h5, h6, .heading{margin:0 0 20px 0; font-size:1.4rem; line-height:normal; font-weight:normal;}
 .heading.nospace{margin-bottom:0;}
 
 address{font-style:normal; font-weight:normal;}
 hr{display:block; width:100%; height:1px; border:solid; border-width:1px 0 0 0;}
 
-.font-xs{font-size:.8rem;}
-.font-x1{font-size:1.2rem;}
-.font-x2{font-size:1.8rem; line-height:normal;}
-.font-x3{font-size:2.8rem; line-height:normal;}
+.font-xs{font-size: 0.9rem;}
+.font-x1{font-size:1rem;}
+.font-x2{font-size:2rem;}
+.font-x3{font-size:3rem;}
+.font-x4{font-size:4rem;}
+.font-x5{font-size:5rem;}
+.font-x6{font-size:6rem;}
+.font-x7{font-size:7rem;}
+.font-x8{font-size:8rem;}
+.font-x9{font-size:9rem;}
+.font-x10{font-size:10rem;}
 
 .wrapper{display:block; position:relative; width:100%; margin:0; padding:0; text-align:left; word-wrap:break-word;}
 /*
@@ -86,21 +101,6 @@ It should be used in conjunction with a second class or ID
 /* HTML 5 Overrides
 --------------------------------------------------------------------------------------------------------------- */
 address, article, aside, figcaption, figure, footer, header, main, nav, section{display:block; margin:0; padding:0;}
-
-
-
-/* Grid - RS-MQF 1140 V.2 - https://www.os-templates.com/free-basic-html5-templates/rs-mqf-1140
---------------------------------------------------------------------------------------------------------------- */
-.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:inline-block; float:left; margin:0 0 0 4.21052%; list-style:none;}
-
-.first{margin-left:0; clear:left;}
-
-.one_quarter{width:21.8421%;}
-.one_third{width:30.52631%;}
-.one_half, .two_quarter{width:47.89473%;}
-.two_third{width:65.26315%;}
-.three_quarter{width:73.94736%;}
-
 
 /* Spacing
 --------------------------------------------------------------------------------------------------------------- */
@@ -122,3 +122,17 @@ address, article, aside, figcaption, figure, footer, header, main, nav, section{
 .inspace-15{padding:15px;}
 .inspace-20{padding:20px;}
 .inspace-30{padding:30px;}
+
+/*Basic grid*/
+.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:inline-block; float:left; margin:0 0 0 4.21052%;}
+
+.first{margin-left:0; clear:left;}
+.one_quarter{width:21.8421%;}
+.one_third{width:30.52631%;}
+.one_half, .two_quarter{width:47.89473%;}
+.two_third{width:65.26315%;}
+.three_quarter{width:73.94736%;}
+
+.grid-3 > li{margin-bottom:50px;}
+.grid-3 > li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last line of items - margin is restored in the media queries when items stack */
+.grid-3 > li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */

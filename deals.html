@@ -1,117 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>BL Deals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="styles/framework.css" rel="stylesheet" type="text/css" media="all">
     <link href="styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link href="styles/cart.css" rel="stylesheet" type="text/css" media="all">
+    <link href="fontawesome-free/css/all.css" rel="stylesheet" type="text/css" media="all">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/getBooks.js"></script>
+
 </head>
+
 <body>
-    <div class="wrapper" style="background-image:url('images/bg3.jpg'); background-repeat: repeat-y">
-
-        <main class="hoc container clear">
-            <!-- main body -->
-            <!-- ################################################################################################ -->
-            <div class = "inspace-30"></div>
-
-            <section id="services">
-
-                <!--Title-->
-                <div class="sectiontitle">
-                    <h1 class="heading font-x3">Best deals</h1>
-                </div>
-
-                <nav id="mainav">
-                    <!-- ################################################################################################ -->
-                    <ul class="clear">
-                        <li><a class="drop" href="#">Pages</a>
-                            <ul>
-                                <li><a href="deals.html">Deals</a></li>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="giftcard.html">Subscribe</a></li>
-                            </ul>
-                    </ul>
-                </nav>
-
-                <ul class="nospace group grid-3">
-
-                    <li class="one_third">
-                        <article>
-                            <a href="book.html"><i class="fas fa-plus"></i></a>
-                            <h6 class="heading">The wise man's fear</h6>
-                            <img src="https://cdn.shopify.com/s/files/1/0055/3282/products/CCI05212015_1024x1024.jpg?v=1432238423">
-                            <footer>
-                                <a href="book.html">About the book &raquo;</a>
-                                <span class = "fl_right bold">Price: 39$</span>
-                            </footer>
-                        </article>
-                    </li>
-
-                    <li class="one_third">
-                        <article>
-                            <a href="book.html"><i class="fas fa-plus"></i></a>
-                            <h6 class="heading">The name of the wind</h6>
-                            <img src="https://cdn4.libris.ro/img/pozeprod/59/1002/DF/11001678.jpg">
-                            <footer>
-                                <a href="book.html">About the book &raquo;</a>
-                                <span class = "fl_right bold">Price: 25$</span>
-                            </footer>
-                        </article>
-                    </li>
-
-                    <li class="one_third">
-                        <article><a href="book.html">
-                            <i class="fas fa-plus"></i></a>
-                            <h6 class="heading">Fahrenheit 451</h6>
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/91EKCYo8gVL.jpg">
-                            <footer>
-                                <a href="book.html">About the book &raquo;</a>
-                                <span class = "fl_right bold">Price: 34$</span>
-                            </footer>
-                        </article>
-                    </li>
-
-                    <li class="one_third">
-                        <article>
-                            <a href="book.html"><i class="fas fa-plus"></i></a>
-                            <h6 class="heading">The wise man's fear</h6>
-                            <img src="https://cdn.shopify.com/s/files/1/0055/3282/products/CCI05212015_1024x1024.jpg?v=1432238423">
-                            <footer>
-                                <a href="book.html">About the book &raquo;</a>
-                                <span class = "fl_right bold">Price: 17$</span>
-                            </footer>
-                        </article>
-                    </li>
-
-                    <li class="one_third">
-                        <article>
-                            <a href="book.html"><i class="fas fa-plus"></i></a>
-                            <h6 class="heading">The name of the wind</h6>
-                            <img src="https://cdn4.libris.ro/img/pozeprod/59/1002/DF/11001678.jpg">
-                            <footer>
-                                <a href="book.html">About the book &raquo;</a>
-                                <span class = "fl_right bold">Price: 50$</span>
-                            </footer>
-                        </article>
-                    </li>
-
-                    <li class="one_third">
-                        <article><a href="book.html">
-                            <i class="fas fa-plus"></i></a>
-                            <h6 class="heading">Fahrenheit 451</h6>
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/91EKCYo8gVL.jpg">
-                            <footer>
-                                <a href="book.html">About the book &raquo;</a>
-                                <span class = "fl_right bold">Price: 70$</span>
-                            </footer>
-                        </article>
-                    </li>
-
-                </ul>
-            </section>
-            <!-- ################################################################################################ -->
-            <!-- / main body -->
-        </main>
+    <h1 class="title page font-x6">Deals, <span>the best you'll find</span></h1>
+    <div class="line right">
+        <button class="btn" id="delete">Delete</button>
+        <button class="btn" id="update">Update</button>
+        <button class="btn" id="create">Create</button>
+        <button class="btn" id="get">Get</button>
+    </div>
+    <div class="gallery">
     </div>
 </body>
 </html>
+
+<!--<div class="image">
+            <img src="https://cdn4.libris.ro/img/pozeprod/59/1002/DF/11001678.jpg">
+            <div class="text">
+                <h1>About this product</h1>
+                <p class="font-xs description">This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.This a book that is very cool. I like it a lot.</p>
+                <span class="inline">
+                    <p class="font-x1 fl_left bold">Price: 35$</p>
+                    <a class="font-x1 bold fl_right" href = "book.html">More >></a>
+                </span>
+            </div>
+        </div>-->

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3de43d24-a608-4fa4-9259-8285884f307c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f2f3e51c-ce34-48b9-a56d-1f529b1b5878" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,29 +10,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1ZAEjA2BEbxEWyF5KrS7Xjf7LwT" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1axPBrKhVEBrt3RkKmeo1mYj6KZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Node project" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -44,23 +36,16 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\40747\Desktop\Project\TehniciWeb\Images" />
-      <recent name="C:\Users\40747\Desktop\Project\TehniciWeb" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\40747\Desktop\Project\TehniciWeb" />
+      <recent name="C:\Users\40747\Desktop\Project\Blue Library" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TehniciWeb/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.index.html" />
-      </list>
-    </recent_temporary>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\40747\Desktop\Project\BlueLibrary\images" />
+      <recent name="C:\Users\40747\Desktop\Project\BlueLibrary\scripts" />
+      <recent name="C:\Users\40747\Desktop\Project\Blue Library\images" />
+      <recent name="C:\Users\40747\Desktop\Project\Blue Library" />
+      <recent name="C:\Users\40747\Desktop\Project\Blue Library\styles" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -79,35 +64,55 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3de43d24-a608-4fa4-9259-8285884f307c" name="Default Changelist" comment="" />
-      <created>1584273630085</created>
+      <changelist id="f2f3e51c-ce34-48b9-a56d-1f529b1b5878" name="Default Changelist" comment="" />
+      <created>1587674138769</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1584273630085</updated>
-      <workItem from="1584273631676" duration="24913000" />
-      <workItem from="1584694336136" duration="6272000" />
-      <workItem from="1584988386052" duration="7580000" />
-      <workItem from="1585594792346" duration="3983000" />
-      <workItem from="1585671172953" duration="4267000" />
-      <workItem from="1585690768636" duration="6846000" />
-      <workItem from="1585745148312" duration="132000" />
+      <updated>1587674138769</updated>
+      <workItem from="1587674141468" duration="38447000" />
+      <workItem from="1587756389515" duration="5478000" />
+      <workItem from="1588360077545" duration="17910000" />
+      <workItem from="1588424546679" duration="18438000" />
+      <workItem from="1589321101564" duration="29221000" />
+      <workItem from="1589455701813" duration="22639000" />
+      <workItem from="1589553925181" duration="394000" />
+      <workItem from="1590698873021" duration="909000" />
+      <workItem from="1590702416430" duration="29000" />
+      <workItem from="1590741918669" duration="95000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="536" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584312897021">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590702444257">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="536" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1584312897021" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584995117113">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590702444257" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1587674439734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584995117113" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1587674439734" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-2" timestamp="1587674439734">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1587674439734" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-3" timestamp="1587674439734">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="dock-window-3/0.0.1536.824@0.0.1536.824" timestamp="1587674439734" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-4" timestamp="1587674439734">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="dock-window-4/0.0.1536.824@0.0.1536.824" timestamp="1587674439734" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1587721233877">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587721233877" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589490440561">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589490440560" />
   </component>
 </project>
