@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2f3e51c-ce34-48b9-a56d-1f529b1b5878" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/deals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/posts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/random.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/task1-8.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/task2-10.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/task2-2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/task3-2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/task4-7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/posts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/quiz.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/random.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/minus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/pencil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/posts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/random.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/books.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deals.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/createPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/getBooks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/task3-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/task3-2.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +95,7 @@
       <workItem from="1590760599935" duration="2113000" />
       <workItem from="1593031332620" duration="188000" />
       <workItem from="1593418009214" duration="15909000" />
+      <workItem from="1593439085635" duration="7146000" />
     </task>
     <servers />
   </component>

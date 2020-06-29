@@ -2,7 +2,7 @@ var quiz = [
     {
         question : "What was the first novel ever written?",
         answers : [["The Tale of Genji", true],
-            ["The Hall of Fame", false], ["Madame of the roses", false], ["The myth of the origin", false]]
+            ["The Hall of Fame", true], ["Madame of the roses", false], ["The myth of the origin", false]]
     },
     {
         question : "What was the first book published by movable type?",
@@ -54,8 +54,63 @@ function quizDisplay() {
     let button = document.createElement("button");
     button.innerText = "Submit";
     button.onclick = getResult;
+
+    document.getElementsByTagName("body")[0].appendChild(button);
 }
 
-function getResult() {
+async function getResult() {
+
+    let count = 0;
+
+    for(let i = 0; i < quiz.length; i++)
+    {
+        let ok = true;
+
+        for(let j = 0; j < quiz[i].answers.length; j++)
+        {
+            let obj = document.getElementById("a" + j.toString() + "q" + i.toString());
+            obj.disabled = true;
+
+            if(obj.checked.toString() !== obj.value.toString())
+            {
+                ok = false;
+                break;
+            }
+
+        }
+
+        if(ok === true)
+            count++;
+
+        console.log(count);
+    }
+
+    // let questions = document.getElementsByClassName("container");
+    // let count = 0;
+    //
+    // for(let i = 0; i < questions.length; i++)
+    // {
+    //     let answers = questions[i].querySelectorAll("input");
+    //     console.log(answers);
+    //     let ok = true;
+    //
+    //     for(let j = 0; j < answers.length; j++)
+    //     {
+    //         if(answers[j].value !== quiz[i].answers[j][1])
+    //         {ok = false; break;}
+    //     }
+    //
+    //     if(ok === true)
+    //         count++;
+    // }
+
+    let quizStruct = document.getElementsByClassName("quiz")[0];
+    let score = document.createElement("p");
+    score.innerText = "Scorul tau e " + count.toString();
+
+    quizStruct.appendChild(score);
+
+    let button = document.getElementsByTagName("button")[0];
+    button.disabled = true;
 
 }
