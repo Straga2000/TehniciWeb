@@ -2,7 +2,7 @@ var newBook = {
     title: "My happy book",
     isbn: "161729243",
     pageCount: 0,
-    thumbnailUrl: "images/newBook.jpg",
+    thumbnailUrl: "../Images/newBook.jpg",
     shortDescription: "It's a happy book!" ,
     price: 1234
 };
@@ -32,22 +32,6 @@ var newUpdateBook = {
     price: 33.01
 };
 
-window.onload = function () {
-
-    getStock();
-
-    var deleteButton = document.getElementById("delete");
-    var updateButton = document.getElementById("update");
-    var createButton = document.getElementById("create");
-    var getButton = document.getElementById("get");
-
-    deleteButton.onclick = deleteBook;
-    createButton.onclick = createBook;
-    getButton.onclick = getRandomBook;
-    updateButton.onclick = updateBook;
-
-};
-
 function getRandomBook() {
 
     fetch('http://localhost:3000/book/' + Math.round(parseInt(localStorage["dataLength"]) * Math.random()).toString())
@@ -55,10 +39,14 @@ function getRandomBook() {
         response.json().then(function (data) { 
 
                 localStorage.setItem("idBookPage", data.id);
-
+                //console.log(localStorage["idBookPage"]);
+                ID = data.id;
                 window.location = "http://localhost:3000/book.html";
 
                 localStorage.setItem("idBookPage", data.id);
+
+
+            //localStorage.setItem("dataLength", (data.length - 1).toString());
         })
     })
 }
@@ -85,7 +73,6 @@ function updateBook() {
         },
         body: JSON.stringify(newUpdateBook)
     }).then(function () {
-    //goModifiy();
         window.location.reload();
     });
 }
@@ -96,6 +83,7 @@ function deleteBook() {
     fetch(`http://localhost:3000/book/${idVar}`, {
         method: 'DELETE',
     }).then(function (data) {
+
         window.location.reload();
     });
 }
@@ -137,6 +125,8 @@ function createElement(dataObject) {
         else
             image.src = "images/No_Picture.jpg";
         image.alt = "";
+
+        //console.log(image.width, image.height);
 
         divText.className = "text";
 
@@ -190,5 +180,4 @@ function createElement(dataObject) {
     }
 
     return dataObject;
-    //console.log(linkElement.href)
 }

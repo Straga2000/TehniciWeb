@@ -1,0 +1,142 @@
+*, *::before, *::after{box-sizing:border-box;}
+
+html
+{
+    width: 100%;
+    height: 100%;
+    font-family: Arial,sans-serif;
+}
+
+body
+{
+    margin: 5%;
+    width: 95%;
+}
+
+body
+{
+    background-image: url("https://images.unsplash.com/photo-1541256942802-7b29531f0df8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-repeat: no-repeat; background-size:cover;
+    background-attachment: fixed;
+    word-wrap: break-word;
+}
+
+
+.line
+{
+    display: flex;
+    flex-flow: row;
+}
+
+button
+{
+    display: flex;
+    font-size: 1rem;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    vertical-align: center;
+}
+
+
+select optgroup *, select optgroup, select
+{
+    display: flex;
+    flex-flow: row;
+    vertical-align: center;
+
+    font-size: 1rem;
+    background-color: #02cade;
+    color: #ffffff;
+
+    padding: 1px;
+    margin-right: 1%;
+
+}
+
+.justify
+{
+    margin-right: 10%;
+}
+
+.justify p
+{
+    text-align: justify;
+    color: white;
+}
+
+#hiderButton
+{
+    width: 10%;
+    height: 5%;
+    padding: 20px;
+    margin: 10px 0 10px 0;
+
+    border:2px solid; border-radius: 12px;
+    cursor:pointer;
+
+    font-family: Arial,sans-serif;
+
+}
+
+.post
+{
+    align-self: center;
+
+    width: 50%;
+    padding: 20px;
+    margin: 10px 0 10px 0;
+    background-color: #02cade;
+    color: white;
+
+    border:none; border-radius: 12px;
+
+    font-family: Arial,sans-serif;
+}
+
+.post input.postComment
+{
+    width: 50%;
+    border:2px solid;
+    cursor:pointer;
+}
+
+.post h1
+{
+    border-width: 2px;
+    border-color: white;
+}
+
+.comment
+{
+    margin: 10px 0 10px 0;
+    background-color: white;
+    color: black;
+}
+
+.line
+{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+input
+{
+    min-width: 25px; min-height: 25px; width: 2%;
+    margin: 10px;
+}
+
+
+
+#postComment, input.postComment
+{
+    width: auto;
+    height: auto;
+    margin-left: 0;
+}
+
+.comment p
+{
+    margin: 10px;
+}

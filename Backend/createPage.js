@@ -1,7 +1,6 @@
 var priceValue = null;
 var nameValue = null;
 var counter = 0;
-
 var countProducts = 0;
 
 window.onload = function () {
@@ -25,8 +24,6 @@ function changeTitle() {
             titleElement.style.color = '#0ac6fc';
             titleElement.style.fontWeight = "bold";
         }
-
-        //console.log(titleElement);
         counter += 1;
     }
     catch (e)
@@ -34,56 +31,16 @@ function changeTitle() {
     }
 }
 
-/*function addProduct(JSONData) {
-    idBookPage = localStorage.getItem("idBookPage");
-    $.ajax({
-        url: 'http://localhost:3000/data/1',
-        type: 'PUT',
-        data: JSON.stringify(JSONData),
-        success: function(data) {
-            console.log(data);
-        },
-        error: function(data) {
-            console.log("Nu s a reusit");
-        }
-    });
-}*/
-
 function getBook() {
 
     console.log(localStorage["idBookPage"]);
-    fetch('http://localhost:3000/book/' + ID)
+    fetch('http://localhost:3000/book/' + localStorage["idBookPage"])
     .then(function (response) {
-        response.json().then(function (data) { 
-
+        response.json().then(function (data) {
             createPage(data);
-
-
-            //localStorage.setItem("dataLength", (data.length - 1).toString());
+            //localStorage.setItem("dataLength", (data.length - 1).toString()); ???
         })
     })
-
-
-    // idBookPage = localStorage.getItem("idBookPage");
-    // $.ajax({
-    //     url: 'http://localhost:3000/book',
-    //     type: 'GET',
-    //     dataType: 'json',
-    //     success: function(data) {
-    //         createPage(data[idBookPage])
-    //         /*for(let i = 0; i < data.length; i++)
-    //             if(data.id === idBookPage)
-    //             {
-    //                 createPage(data[i]);
-    //                 console.log(data[i]);
-    //                 break;
-    //             }*/
-    //         /*console.log(idBookPage, data[idBookPage]);*/
-    //     },
-    //     error: function(data) {
-    //         console.log("Nu s a reusit");
-    //     }
-    // });
 }
 
 function createPage(object) {
@@ -124,13 +81,6 @@ function createPage(object) {
     var button = document.createElement("button");
     button.className = "btn";
     button.innerText = "Add to cart";
-
-    button.onclick = function (){
-
-        var text = '{'  + "\""+ countProducts.toString() + "\""+' : ' + object.id.toString() + '}';
-        console.log(text);
-        addProduct(JSON.parse(text)); countProducts++;
-    };
 
     /*Combine all*/
     imageContainer.appendChild(image);
